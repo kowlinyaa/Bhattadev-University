@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="bd_icon.png">
+        <title>Bhattadev University</title>
+    </head>
+    <body>
+    
+        <div class="header">
+            <div class="nav_bar">
+                <div>
+                    <a href="https://www.bhattadevuniversity.ac.in/web"><img class="bd_icon" src="bd_icon.png"></a>
+                    <a href="https://www.bhattadevuniversity.ac.in/web"><img class="bd_name" src="bd_name.png"></a>
+                </div>
+                <div class="nav_bottons">
+                    <a href="Index.html" class="link home"><img class="icon" src="home.png">Home</a>
+                    <a href="https://www.bhattadevuniversity.ac.in/web" class="link university"><img class="icon" src="bd_icon1.png">University</a>
+                    <a href="#" class="link about"><img class="icon" src="info.png">About</a>
+                    <a href="#" class="link contact"><img class="icon" src="contact.png">Contact</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="main-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="filter-section">
+                <div class="filter-title">Select Semester</div>
+                <div class="semester-options">
+                    <button class="semester-btn active" onclick="displaySemester(1, this)">Semester 1</button>
+                    <button class="semester-btn" onclick="displaySemester(2, this)">Semester 2</button>
+                    <button class="semester-btn" onclick="displaySemester(3, this)">Semester 3</button>
+                    <button class="semester-btn" onclick="displaySemester(4, this)">Semester 4</button>
+                    <button class="semester-btn" onclick="displaySemester(5, this)">Semester 5</button>
+                    <button class="semester-btn" onclick="displaySemester(6, this)">Semester 6</button>
+                </div>
+            </div>
+        </aside>
+ 
+        <!-- CONTENT AREA -->
+        <div class="content-area">
+            <div class="section-header">
+                <h1 class="section-title">Computer Science</h1>
+                <p class="results-count">Found <span id="resultsCount">0</span> papers</p>
+            </div>
+ 
+            <!-- PAPERS GRID -->
+            <div class="papers-grid" id="papersGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+ 
+            <!-- NO RESULTS MESSAGE -->
+            <div class="no-results" id="noResults" style="display: none;">
+                No papers found for this semester.
+            </div>
+        </div>
+    </div>
+ 
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Bhattadev University</p>
+        <p>Question Papers Archive</p>
+        <p>For more information, visit: <a href="#" style="color: #F79540; text-decoration: none;">bhattadevuniversity.ac.in</a></p>
+    </footer>
+ 
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentSemester = 1;
+ 
+        // Semester 1 Papers
+        function semester1Papers() {
+            return [
+                {
+                    code: "CSE1104C",
+                    name: "Computer Fundamental and Application",
+                    type: "Core Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/1st25core.pdf" },
+                        { year: "2024", url: "coputerscience/1st24core.pdf" }
+                    ]
+                },
+                {
+                    code: "CSE1103SE",
+                    name: "Web Technology",
+                    type: "SEC Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/1st25sec.pdf" },
+                        { year: "2024", url: "coputerscience/1st24sec.pdf" }
+                    ]
+                },
+            ];
+        }
+ 
+        // Semester 2 Papers
+        function semester2Papers() {
+            return [
+                {
+                    code: "CSE2104C",
+                    name: "Programming in C and C++",
+                    type: "Core Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/2nd25core.pdf" },
+                    ]
+                },
+                {
+                    code: "CSE-2103SE",
+                    name: "System Software & Open Source Systems",
+                    type: "SEC Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/2nd25sec.pdf" },
+                    ]
+                },
+            ];
+        }
+ 
+        // Semester 3 Papers
+        function semester3Papers() {
+            return [
+                {
+                    code: "CSE3104C",
+                    name: "Digital Systems and Design",
+                    type: "Core Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/3rd25core.pdf" },
+                    ]
+                },
+                {
+                    code: "CSE3104C",
+                    name: " Discrete Mathematics",
+                    type: "Core Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/3rd25core2.pdf" },
+                    ]
+                },
+                {
+                    code: "CSE3103SE",
+                    name: "Programming in Python and R",
+                    type: "SEC Paper",
+                    years: [
+                        { year: "2025", url: "coputerscience/3rd25sec.pdf" },
+                    ]
+                },
+            ];
+        }
+ 
+        // Semester 4 Papers
+        function semester4Papers() {
+            return [
+                {
+                    code: "PHY-401",
+                    name: "Modern Physics",
+                    type: "Core Paper 1",
+                    years: [
+                        { year: "2023-24", url: "papers/PHY-401-2023-24.pdf" }
+                    ]
+                }
+            ];
+        }
+ 
+        // Semester 5 Papers
+        function semester5Papers() {
+            return [
+                {
+                    code: "PHY-501",
+                    name: "Electromagnetic Theory",
+                    type: "Core Paper 1",
+                    years: [
+                        { year: "2023-24", url: "papers/PHY-501-2023-24.pdf" }
+                    ]
+                }
+            ];
+        }
+ 
+        // Semester 6 Papers
+        function semester6Papers() {
+            return [
+                {
+                    code: "PHY-601",
+                    name: "Nuclear Physics",
+                    type: "Core Paper 1",
+                    years: [
+                        { year: "2023-24", url: "papers/PHY-601-2023-24.pdf" }
+                    ]
+                }
+            ];
+        }
+ 
+        // Get papers for selected semester
+        function getPapersForSemester(semester) {
+            switch(semester) {
+                case 1: return semester1Papers();
+                case 2: return semester2Papers();
+                case 3: return semester3Papers();
+                case 4: return semester4Papers();
+                case 5: return semester5Papers();
+                case 6: return semester6Papers();
+                default: return [];
+            }
+        }
+ 
+        // Display semester
+        function displaySemester(semester, element) {
+            currentSemester = semester;
+            
+            // Update active button
+            document.querySelectorAll('.semester-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            
+            // Display papers
+            displayPapers();
+        }
+ 
+        // Display papers
+        function displayPapers() {
+            const papers = getPapersForSemester(currentSemester);
+            const container = document.getElementById('papersGrid');
+            const noResults = document.getElementById('noResults');
+            const resultsCount = document.getElementById('resultsCount');
+ 
+            container.innerHTML = '';
+ 
+            if (papers.length === 0) {
+                noResults.style.display = 'block';
+                resultsCount.textContent = '0';
+                return;
+            }
+ 
+            noResults.style.display = 'none';
+            resultsCount.textContent = papers.length;
+ 
+            papers.forEach(paper => {
+                // Create a card for each year
+                paper.years.forEach(yearData => {
+                    const card = document.createElement('div');
+                    card.className = 'paper-card';
+                    
+                    card.innerHTML = `
+                        <div class="paper-type">${paper.type}</div>
+                        <div class="paper-title">${paper.name}</div>
+                        <div class="paper-code">${paper.code}</div>
+                        <div class="paper-year">📅 ${yearData.year}</div>
+                        <div class="paper-actions">
+                            <a href="${yearData.url}" target="_blank" class="btn btn-view">
+                                👁️ View
+                            </a>
+                            <a href="${yearData.url}" download="${yearData.year}" class="btn btn-download">
+                                ⬇️ Download
+                            </a>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            });
+        }
+ 
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            displayPapers();
+        });
+        </script>
+</body>
+</html>
