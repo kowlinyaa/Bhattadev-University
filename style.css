@@ -158,496 +158,289 @@ h3{
 
 
 
-
-
+/* ===== SUBJECT PAGES ONLY (Computer Science, Physics, etc.) ===== */
 
  /* ===== MAIN CONTENT ===== */
-        .main-container {
-            display: flex;
-            gap: 20px;
-            padding: 30px 40px;
-            flex: 1;
-        }
- 
-        /* ===== SIDEBAR (FILTERS) ===== */
-        .sidebar {
-            width: 250px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            height: fit-content;
-        }
- 
-        .filter-section {
-            margin-bottom: 25px;
-        }
- 
-        .filter-title {
-            color: #1D5DA7;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #F79540;
-            padding-bottom: 8px;
-        }
- 
-        .semester-options {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
- 
-        .semester-btn {
-            padding: 10px 15px;
-            background-color: #f5f5f5;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            color: #333;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
- 
-        .semester-btn:hover {
-            background-color: #e8f0f8;
-            border-color: #1D5DA7;
-        }
- 
-        .semester-btn.active {
-            background-color: #1D5DA7;
-            color: white;
-            border-color: #1D5DA7;
-        }
- 
-        /* ===== CONTENT AREA ===== */
-        .content-area {
-            flex: 1;
-        }
- 
-        .section-header {
-            margin-bottom: 30px;
-        }
- 
-        .section-title {
-            color: #1D5DA7;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
- 
-        .results-count {
-            color: #666;
-            font-size: 14px;
-        }
- 
- 
- 
-        /* ===== PAPERS GRID ===== */
-        .papers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
- 
-        .paper-card {
-            background: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-        }
- 
-        .paper-card:hover {
-            transform: translateY(-5px);
-            border-color: #F79540;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-        }
- 
-        .paper-type {
-            color: #F79540;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
- 
-        .paper-title {
-            color: #1D5DA7;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
- 
-        .paper-code {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
- 
-        .paper-year {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
- 
-        .paper-actions {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
- 
-        .btn {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
- 
-        .btn-view {
-            background-color: #1D5DA7;
-            color: white;
-        }
- 
-        .btn-view:hover {
-            background-color: #154a8a;
-        }
- 
-        .btn-download {
-            background-color: #F79540;
-            color: white;
-        }
- 
-        .btn-download:hover {
-            background-color: #e67e2d;
-        }
- 
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #999;
-            font-size: 16px;
-        }
- 
-        /* ===== FOOTER ===== */
-        footer {
-            background-color: #1D5DA7;
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-            margin-top: auto;
-        }
- 
-        footer p {
-            margin: 5px 0;
-        }
- 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .main-container {
-                flex-direction: column;
-                padding: 20px;
-                gap: 15px;
-            }
- 
-            .sidebar {
-                width: 100%;
-                order: 1;
-            }
- 
-            .content-area {
-                order: 2;
-            }
- 
-            .papers-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 15px;
-            }
- 
-            .section-title {
-                font-size: 24px;
-            }
-        }
- 
-        @media (max-width: 480px) {
-            .main-container {
-                padding: 15px;
-            }
- 
-            .sidebar {
-                order: 1;
-            }
- 
-            .content-area {
-                order: 2;
-            }
- 
-            .papers-grid {
-                grid-template-columns: 1fr;
-            }
- 
-            .section-title {
-                font-size: 20px;
-            }
- 
-            .paper-actions {
-                flex-direction: column;
-            }
- 
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* ===== TABLET DEVICES (768px and below) ===== */
-            @media (max-width: 768px) {
-                .nav_bar {
-                    padding: 15px 20px;
-                    justify-content: space-between;
-                }
- 
-                .nav_bar > div:first-child {
-                    gap: 5px;
-                }
- 
-                .bd_icon {
-                    height: 80px;
-                }
- 
-                .bd_name {
-                    height: 60px;
-                    width: 250px;
-                }
- 
-                .nav_bottons {
-                    padding: 0px 15px;
-                    gap: 8px;
-                }
- 
-                .link {
-                    margin: 0px 5px;
-                    font-size: 14px;
-                    gap: 3px;
-                }
- 
-                .icon {
-                    height: 18px;
-                }
- 
-                .dept-container {
-                    padding: 30px 5%;
-                }
- 
-                .section-title {
-                    font-size: 24px;
-                    margin-bottom: 25px;
-                }
- 
-                .dept-grid {
-                    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-                    gap: 15px;
-                }
- 
-                .dept-card {
-                    padding: 20px;
-                    min-height: 180px;
-                }
- 
-                .dept-logo {
-                    width: 45px;
-                    height: 45px;
-                }
- 
-                .dept-card h3 {
-                    font-size: 16px;
-                }
-            }
- 
-            /* ===== MOBILE DEVICES (480px and below) ===== */
-            @media (max-width: 480px) {
-                .nav_bar {
-                    padding: 10px 15px;
-                    flex-direction: column;
-                    gap: 10px;
-                    border-bottom: solid 5px #F79540;
-                }
- 
-                .nav_bar > div:first-child {
-                    width: 100%;
-                    justify-content: center;
-                }
- 
-                .bd_icon {
-                    height: 60px;
-                }
- 
-                .bd_name {
-                    height: 45px;
-                    width: 200px;
-                }
- 
-                .nav_bottons {
-                    width: 100%;
-                    padding: 0px;
-                    justify-content: space-around;
-                }
- 
-                .link {
-                    margin: 0px 5px;
-                    font-size: 12px;
-                    gap: 2px;
-                }
- 
-                .icon {
-                    height: 16px;
-                }
- 
-                .dept-container {
-                    padding: 20px 5%;
-                }
- 
-                .section-title {
-                    font-size: 20px;
-                    margin-bottom: 20px;
-                }
- 
-                .dept-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 12px;
-                }
- 
-                .dept-card {
-                    padding: 15px;
-                    min-height: 160px;
-                }
- 
-                .dept-icon {
-                    margin-bottom: 10px;
-                }
- 
-                .dept-logo {
-                    width: 40px;
-                    height: 40px;
-                }
- 
-                .dept-card h3 {
-                    font-size: 14px;
-                }
-            }
- 
-            /* ===== EXTRA SMALL (Below 360px) ===== */
-            @media (max-width: 360px) {
-                .bd_icon {
-                    height: 50px;
-                }
- 
-                .bd_name {
-                    height: 35px;
-                    width: 150px;
-                }
- 
-                .link {
-                    font-size: 11px;
-                }
- 
-                .icon {
-                    height: 14px;
-                }
- 
-                .section-title {
-                    font-size: 18px;
-                }
- 
-                .dept-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 10px;
-                }
- 
-                .dept-card {
-                    padding: 12px;
-                    min-height: 140px;
-                }
- 
-                .dept-logo {
-                    width: 35px;
-                    height: 35px;
-                }
- 
-                .dept-card h3 {
-                    font-size: 12px;
-                }
-            }
+.main-container {
+    display: flex;
+    gap: 20px;
+    padding: 30px 40px;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+ 
+/* ===== SIDEBAR (FILTERS) ===== */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-title {
+    color: #1D5DA7;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #F79540;
+    padding-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.semester-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.semester-btn {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.semester-btn:hover {
+    background-color: #e8f0f8;
+    border-color: #1D5DA7;
+}
+
+.semester-btn.active {
+    background-color: #1D5DA7;
+    color: white;
+    border-color: #1D5DA7;
+}
+
+ 
+/* ===== CONTENT AREA ===== */
+.content-area {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #1D5DA7;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.results-count {
+    color: #666;
+    font-size: 14px;
+}
+
+
+
+/* ===== PAPERS GRID ===== */
+.papers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.paper-card {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.paper-card:hover {
+    transform: translateY(-5px);
+    border-color: #F79540;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.paper-type {
+    color: #F79540;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.paper-title {
+    color: #1D5DA7;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.paper-code {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.paper-year {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.paper-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.btn-view {
+    background-color: #1D5DA7;
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #154a8a;
+}
+
+.btn-download {
+    background-color: #F79540;
+    color: white;
+}
+
+.btn-download:hover {
+    background-color: #e67e2d;
+}
+
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 16px;
+}
+
+ 
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1D5DA7;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+ 
+/* ===== RESPONSIVE FOR SUBJECT PAGES ONLY ===== */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 1;
+    }
+
+    .content-area {
+        order: 2;
+    }
+
+    .papers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 1;
+    }
+
+    .content-area {
+        order: 2;
+    }
+
+    .papers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .paper-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer {
+        padding: 20px 15px;
+    }
+}
