@@ -16,8 +16,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 40px;
+    padding: 0 40px;
     border-bottom: solid 10px #F79540;
+    gap: 10px;
 }
 
 .bd_icon{
@@ -409,6 +410,43 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    .nav_bar {
+        padding: 10px 10px;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav_bar > div:first-child {
+        display: flex;
+        gap: 3px;
+    }
+
+    .bd_icon {
+        height: 60px;
+    }
+
+    .bd_name {
+        height: 45px;
+        width: 180px;
+    }
+
+    .nav_bottons {
+        width: 100%;
+        padding: 0;
+        justify-content: space-around;
+        gap: 3px;
+    }
+
+    .link {
+        margin: 0;
+        font-size: 11px;
+        gap: 2px;
+    }
+
+    .icon {
+        height: 16px;
+    }
+
     .main-container {
         padding: 15px;
         flex-direction: column;
